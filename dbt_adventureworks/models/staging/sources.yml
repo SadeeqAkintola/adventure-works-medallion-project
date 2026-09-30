@@ -1,0 +1,34 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: idyllic-theater-agentic-ai
+    schema: adventureworks_bronze
+    description: "Raw fidelity ingestion layer loaded directly from AdventureWorksDW CSV files via Dataflow."
+    tables:
+      - name: DimAccount
+      - name: DimCurrency
+      - name: DimCustomer
+      - name: DimDate
+      - name: DimDepartmentGroup
+      - name: DimEmployee
+      - name: DimGeography
+      - name: DimOrganization
+      - name: DimProduct
+      - name: DimProductCategory
+      - name: DimProductSubcategory
+      - name: DimPromotion
+      - name: DimReseller
+      - name: DimSalesReason
+      - name: DimSalesTerritory
+      - name: DimScenario
+      - name: FactCallCenter
+      - name: FactCurrencyRate
+      - name: FactFinance
+      - name: FactInternetSales
+      - name: FactInternetSalesReason
+      - name: FactProductInventory
+      - name: FactResellerSales
+      - name: FactSalesQuota
+      - name: FactSurveyResponse
+      - name: ProspectiveBuyer

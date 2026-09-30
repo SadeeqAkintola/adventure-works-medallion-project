@@ -1,0 +1,6 @@
+apache-beam[gcp]==2.76.0
+google-cloud-bigquery>=3.25.0
+google-cloud-storage>=2.18.0
+dbt-bigquery>=1.8.0
+pandas>=2.2.0
+pyarrow>=17.0.0

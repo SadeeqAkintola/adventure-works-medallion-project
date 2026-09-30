@@ -1,0 +1,35 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    name: Validate dbt & Dataflow Pipeline
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install "apache-beam[gcp]" dbt-bigquery google-cloud-bigquery google-cloud-storage
+
+      - name: Validate dbt Project Syntax
+        run: |
+          cd dbt_adventureworks
+          dbt parse --profiles-dir .
+
+      - name: Validate Schema Mapping
+        run: |
+          python scripts/extract_schemas.py

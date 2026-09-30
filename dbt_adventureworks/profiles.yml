@@ -1,0 +1,24 @@
+adventureworks_dw:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: idyllic-theater-agentic-ai
+      dataset: adventureworks_silver
+      location: europe-west2
+      threads: 8
+      timeout_seconds: 300
+      priority: interactive
+      retries: 1
+
+    prod:
+      type: bigquery
+      method: oauth
+      project: idyllic-theater-agentic-ai
+      dataset: adventureworks_silver
+      location: europe-west2
+      threads: 16
+      timeout_seconds: 600
+      priority: interactive
+      retries: 2

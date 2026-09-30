@@ -1,0 +1,75 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Conformed customer dimension"
+    columns:
+      - name: customer_key
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_products
+    description: "Conformed product dimension"
+    columns:
+      - name: product_key
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_dates
+    description: "Conformed date dimension"
+    columns:
+      - name: date_key
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_internet_sales
+    description: "Cleaned internet sales facts"
+    columns:
+      - name: sales_order_line_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_key
+        tests:
+          - not_null
+      - name: product_key
+        tests:
+          - not_null
+
+  - name: fact_reseller_sales
+    description: "Cleaned reseller sales facts"
+    columns:
+      - name: sales_order_line_id
+        tests:
+          - unique
+          - not_null
+      - name: reseller_key
+        tests:
+          - not_null
+      - name: product_key
+        tests:
+          - not_null
+
+  - name: mart_sales_executive_overview
+    description: "Gold unified sales executive mart"
+    columns:
+      - name: sales_order_number
+        tests:
+          - not_null
+      - name: gross_sales_amount
+        tests:
+          - not_null
+
+  - name: mart_customer_360_rfm
+    description: "Gold customer 360 RFM mart"
+    columns:
+      - name: customer_key
+        tests:
+          - unique
+          - not_null
+      - name: customer_segment
+        tests:
+          - not_null

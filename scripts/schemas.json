@@ -1,0 +1,2360 @@
+{
+  "DatabaseLog": {
+    "table_name": "DatabaseLog",
+    "csv_file": "DatabaseLog.csv",
+    "columns": [
+      {
+        "name": "DatabaseLogID",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "PostTime",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      },
+      {
+        "name": "DatabaseUser",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "sysname"
+      },
+      {
+        "name": "Event",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "sysname"
+      },
+      {
+        "name": "Schema",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "sysname"
+      },
+      {
+        "name": "Object",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "sysname"
+      },
+      {
+        "name": "TSQL",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "XmlEvent",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "xml"
+      }
+    ]
+  },
+  "AdventureWorksDWBuildVersion": {
+    "table_name": "AdventureWorksDWBuildVersion",
+    "csv_file": "AdventureWorksDWBuildVersion.csv",
+    "columns": [
+      {
+        "name": "DBVersion",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "VersionDate",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      }
+    ]
+  },
+  "DimAccount": {
+    "table_name": "DimAccount",
+    "csv_file": "DimAccount.csv",
+    "columns": [
+      {
+        "name": "AccountKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ParentAccountKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "AccountCodeAlternateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ParentAccountCodeAlternateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "AccountDescription",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "AccountType",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "Operator",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "CustomMembers",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "ValueType",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "CustomMemberOptions",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      }
+    ]
+  },
+  "DimCurrency": {
+    "table_name": "DimCurrency",
+    "csv_file": "DimCurrency.csv",
+    "columns": [
+      {
+        "name": "CurrencyKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "CurrencyAlternateKey",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nchar"
+      },
+      {
+        "name": "CurrencyName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      }
+    ]
+  },
+  "DimCustomer": {
+    "table_name": "DimCustomer",
+    "csv_file": "DimCustomer.csv",
+    "columns": [
+      {
+        "name": "CustomerKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "GeographyKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "CustomerAlternateKey",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "Title",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "FirstName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "MiddleName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "LastName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "NameStyle",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE",
+        "raw_sql_type": "bit"
+      },
+      {
+        "name": "BirthDate",
+        "type": "DATE",
+        "mode": "NULLABLE",
+        "raw_sql_type": "date"
+      },
+      {
+        "name": "MaritalStatus",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nchar"
+      },
+      {
+        "name": "Suffix",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "Gender",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "EmailAddress",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "YearlyIncome",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "TotalChildren",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "NumberChildrenAtHome",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "EnglishEducation",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SpanishEducation",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "FrenchEducation",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "EnglishOccupation",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SpanishOccupation",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "FrenchOccupation",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "HouseOwnerFlag",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nchar"
+      },
+      {
+        "name": "NumberCarsOwned",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "AddressLine1",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "AddressLine2",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "Phone",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "DateFirstPurchase",
+        "type": "DATE",
+        "mode": "NULLABLE",
+        "raw_sql_type": "date"
+      },
+      {
+        "name": "CommuteDistance",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      }
+    ]
+  },
+  "DimDate": {
+    "table_name": "DimDate",
+    "csv_file": "DimDate.csv",
+    "columns": [
+      {
+        "name": "DateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "FullDateAlternateKey",
+        "type": "DATE",
+        "mode": "NULLABLE",
+        "raw_sql_type": "date"
+      },
+      {
+        "name": "DayNumberOfWeek",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "EnglishDayNameOfWeek",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SpanishDayNameOfWeek",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "FrenchDayNameOfWeek",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "DayNumberOfMonth",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "DayNumberOfYear",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "smallint"
+      },
+      {
+        "name": "WeekNumberOfYear",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "EnglishMonthName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SpanishMonthName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "FrenchMonthName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "MonthNumberOfYear",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "CalendarQuarter",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "CalendarYear",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "smallint"
+      },
+      {
+        "name": "CalendarSemester",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "FiscalQuarter",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "FiscalYear",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "smallint"
+      },
+      {
+        "name": "FiscalSemester",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      }
+    ]
+  },
+  "DimDepartmentGroup": {
+    "table_name": "DimDepartmentGroup",
+    "csv_file": "DimDepartmentGroup.csv",
+    "columns": [
+      {
+        "name": "DepartmentGroupKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ParentDepartmentGroupKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "DepartmentGroupName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      }
+    ]
+  },
+  "DimEmployee": {
+    "table_name": "DimEmployee",
+    "csv_file": "DimEmployee.csv",
+    "columns": [
+      {
+        "name": "EmployeeKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ParentEmployeeKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "EmployeeNationalIDAlternateKey",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "ParentEmployeeNationalIDAlternateKey",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SalesTerritoryKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "FirstName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "LastName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "MiddleName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "NameStyle",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE",
+        "raw_sql_type": "bit"
+      },
+      {
+        "name": "Title",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "HireDate",
+        "type": "DATE",
+        "mode": "NULLABLE",
+        "raw_sql_type": "date"
+      },
+      {
+        "name": "BirthDate",
+        "type": "DATE",
+        "mode": "NULLABLE",
+        "raw_sql_type": "date"
+      },
+      {
+        "name": "LoginID",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "EmailAddress",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "Phone",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "MaritalStatus",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nchar"
+      },
+      {
+        "name": "EmergencyContactName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "EmergencyContactPhone",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SalariedFlag",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE",
+        "raw_sql_type": "bit"
+      },
+      {
+        "name": "Gender",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nchar"
+      },
+      {
+        "name": "PayFrequency",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "BaseRate",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "VacationHours",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "smallint"
+      },
+      {
+        "name": "SickLeaveHours",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "smallint"
+      },
+      {
+        "name": "CurrentFlag",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE",
+        "raw_sql_type": "bit"
+      },
+      {
+        "name": "SalesPersonFlag",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE",
+        "raw_sql_type": "bit"
+      },
+      {
+        "name": "DepartmentName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "StartDate",
+        "type": "DATE",
+        "mode": "NULLABLE",
+        "raw_sql_type": "date"
+      },
+      {
+        "name": "EndDate",
+        "type": "DATE",
+        "mode": "NULLABLE",
+        "raw_sql_type": "date"
+      },
+      {
+        "name": "Status",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "EmployeePhoto",
+        "type": "BYTES",
+        "mode": "NULLABLE",
+        "raw_sql_type": "varbinary"
+      }
+    ]
+  },
+  "DimGeography": {
+    "table_name": "DimGeography",
+    "csv_file": "DimGeography.csv",
+    "columns": [
+      {
+        "name": "GeographyKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "City",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "StateProvinceCode",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "StateProvinceName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "CountryRegionCode",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "EnglishCountryRegionName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SpanishCountryRegionName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "FrenchCountryRegionName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "PostalCode",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SalesTerritoryKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "IpAddressLocator",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      }
+    ]
+  },
+  "DimOrganization": {
+    "table_name": "DimOrganization",
+    "csv_file": "DimOrganization.csv",
+    "columns": [
+      {
+        "name": "OrganizationKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ParentOrganizationKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "PercentageOfOwnership",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "OrganizationName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "CurrencyKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      }
+    ]
+  },
+  "DimProduct": {
+    "table_name": "DimProduct",
+    "csv_file": "DimProduct.csv",
+    "columns": [
+      {
+        "name": "ProductKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ProductAlternateKey",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "ProductSubcategoryKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "WeightUnitMeasureCode",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nchar"
+      },
+      {
+        "name": "SizeUnitMeasureCode",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nchar"
+      },
+      {
+        "name": "EnglishProductName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SpanishProductName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "FrenchProductName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "StandardCost",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "FinishedGoodsFlag",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE",
+        "raw_sql_type": "bit"
+      },
+      {
+        "name": "Color",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SafetyStockLevel",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "smallint"
+      },
+      {
+        "name": "ReorderPoint",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "smallint"
+      },
+      {
+        "name": "ListPrice",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "Size",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SizeRange",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "Weight",
+        "type": "FLOAT",
+        "mode": "NULLABLE",
+        "raw_sql_type": "float"
+      },
+      {
+        "name": "DaysToManufacture",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ProductLine",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nchar"
+      },
+      {
+        "name": "DealerPrice",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "Class",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nchar"
+      },
+      {
+        "name": "Style",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nchar"
+      },
+      {
+        "name": "ModelName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "LargePhoto",
+        "type": "BYTES",
+        "mode": "NULLABLE",
+        "raw_sql_type": "varbinary"
+      },
+      {
+        "name": "EnglishDescription",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "FrenchDescription",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "ChineseDescription",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "ArabicDescription",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "HebrewDescription",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "ThaiDescription",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "GermanDescription",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "JapaneseDescription",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "TurkishDescription",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "StartDate",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      },
+      {
+        "name": "EndDate",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      },
+      {
+        "name": "Status",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      }
+    ]
+  },
+  "DimProductCategory": {
+    "table_name": "DimProductCategory",
+    "csv_file": "DimProductCategory.csv",
+    "columns": [
+      {
+        "name": "ProductCategoryKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ProductCategoryAlternateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "EnglishProductCategoryName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SpanishProductCategoryName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "FrenchProductCategoryName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      }
+    ]
+  },
+  "DimProductSubcategory": {
+    "table_name": "DimProductSubcategory",
+    "csv_file": "DimProductSubcategory.csv",
+    "columns": [
+      {
+        "name": "ProductSubcategoryKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ProductSubcategoryAlternateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "EnglishProductSubcategoryName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SpanishProductSubcategoryName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "FrenchProductSubcategoryName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "ProductCategoryKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      }
+    ]
+  },
+  "DimPromotion": {
+    "table_name": "DimPromotion",
+    "csv_file": "DimPromotion.csv",
+    "columns": [
+      {
+        "name": "PromotionKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "PromotionAlternateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "EnglishPromotionName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SpanishPromotionName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "FrenchPromotionName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "DiscountPct",
+        "type": "FLOAT",
+        "mode": "NULLABLE",
+        "raw_sql_type": "float"
+      },
+      {
+        "name": "EnglishPromotionType",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SpanishPromotionType",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "FrenchPromotionType",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "EnglishPromotionCategory",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SpanishPromotionCategory",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "FrenchPromotionCategory",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "StartDate",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      },
+      {
+        "name": "EndDate",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      },
+      {
+        "name": "MinQty",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "MaxQty",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      }
+    ]
+  },
+  "DimReseller": {
+    "table_name": "DimReseller",
+    "csv_file": "DimReseller.csv",
+    "columns": [
+      {
+        "name": "ResellerKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "GeographyKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ResellerAlternateKey",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "Phone",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "BusinessType",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "varchar"
+      },
+      {
+        "name": "ResellerName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "NumberEmployees",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "OrderFrequency",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "char"
+      },
+      {
+        "name": "OrderMonth",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "FirstOrderYear",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "LastOrderYear",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ProductLine",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "AddressLine1",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "AddressLine2",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "AnnualSales",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "BankName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "MinPaymentType",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "MinPaymentAmount",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "AnnualRevenue",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "YearOpened",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      }
+    ]
+  },
+  "DimSalesReason": {
+    "table_name": "DimSalesReason",
+    "csv_file": "DimSalesReason.csv",
+    "columns": [
+      {
+        "name": "SalesReasonKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "SalesReasonAlternateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "SalesReasonName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SalesReasonReasonType",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      }
+    ]
+  },
+  "DimSalesTerritory": {
+    "table_name": "DimSalesTerritory",
+    "csv_file": "DimSalesTerritory.csv",
+    "columns": [
+      {
+        "name": "SalesTerritoryKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "SalesTerritoryAlternateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "SalesTerritoryRegion",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SalesTerritoryCountry",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SalesTerritoryGroup",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SalesTerritoryImage",
+        "type": "BYTES",
+        "mode": "NULLABLE",
+        "raw_sql_type": "varbinary"
+      }
+    ]
+  },
+  "DimScenario": {
+    "table_name": "DimScenario",
+    "csv_file": "DimScenario.csv",
+    "columns": [
+      {
+        "name": "ScenarioKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ScenarioName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      }
+    ]
+  },
+  "FactAdditionalInternationalProductDescription": {
+    "table_name": "FactAdditionalInternationalProductDescription",
+    "csv_file": "FactAdditionalInternationalProductDescription.csv",
+    "columns": [
+      {
+        "name": "ProductKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "CultureName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "ProductDescription",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      }
+    ]
+  },
+  "FactCallCenter": {
+    "table_name": "FactCallCenter",
+    "csv_file": "FactCallCenter.csv",
+    "columns": [
+      {
+        "name": "FactCallCenterID",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "DateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "WageType",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "Shift",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "LevelOneOperators",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "smallint"
+      },
+      {
+        "name": "LevelTwoOperators",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "smallint"
+      },
+      {
+        "name": "TotalOperators",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "smallint"
+      },
+      {
+        "name": "Calls",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "AutomaticResponses",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "Orders",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "IssuesRaised",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "smallint"
+      },
+      {
+        "name": "AverageTimePerIssue",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "smallint"
+      },
+      {
+        "name": "ServiceGrade",
+        "type": "FLOAT",
+        "mode": "NULLABLE",
+        "raw_sql_type": "float"
+      },
+      {
+        "name": "Date",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      }
+    ]
+  },
+  "FactCurrencyRate": {
+    "table_name": "FactCurrencyRate",
+    "csv_file": "FactCurrencyRate.csv",
+    "columns": [
+      {
+        "name": "CurrencyKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "DateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "AverageRate",
+        "type": "FLOAT",
+        "mode": "NULLABLE",
+        "raw_sql_type": "float"
+      },
+      {
+        "name": "EndOfDayRate",
+        "type": "FLOAT",
+        "mode": "NULLABLE",
+        "raw_sql_type": "float"
+      },
+      {
+        "name": "Date",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      }
+    ]
+  },
+  "FactFinance": {
+    "table_name": "FactFinance",
+    "csv_file": "FactFinance.csv",
+    "columns": [
+      {
+        "name": "FinanceKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "DateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "OrganizationKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "DepartmentGroupKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ScenarioKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "AccountKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "Amount",
+        "type": "FLOAT",
+        "mode": "NULLABLE",
+        "raw_sql_type": "float"
+      },
+      {
+        "name": "Date",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      }
+    ]
+  },
+  "FactInternetSales": {
+    "table_name": "FactInternetSales",
+    "csv_file": "FactInternetSales.csv",
+    "columns": [
+      {
+        "name": "ProductKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "OrderDateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "DueDateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ShipDateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "CustomerKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "PromotionKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "CurrencyKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "SalesTerritoryKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "SalesOrderNumber",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SalesOrderLineNumber",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "RevisionNumber",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "OrderQuantity",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "smallint"
+      },
+      {
+        "name": "UnitPrice",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "ExtendedAmount",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "UnitPriceDiscountPct",
+        "type": "FLOAT",
+        "mode": "NULLABLE",
+        "raw_sql_type": "float"
+      },
+      {
+        "name": "DiscountAmount",
+        "type": "FLOAT",
+        "mode": "NULLABLE",
+        "raw_sql_type": "float"
+      },
+      {
+        "name": "ProductStandardCost",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "TotalProductCost",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "SalesAmount",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "TaxAmt",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "Freight",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "CarrierTrackingNumber",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "CustomerPONumber",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "OrderDate",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      },
+      {
+        "name": "DueDate",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      },
+      {
+        "name": "ShipDate",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      }
+    ]
+  },
+  "FactInternetSalesReason": {
+    "table_name": "FactInternetSalesReason",
+    "csv_file": "FactInternetSalesReason.csv",
+    "columns": [
+      {
+        "name": "SalesOrderNumber",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SalesOrderLineNumber",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "SalesReasonKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      }
+    ]
+  },
+  "FactProductInventory": {
+    "table_name": "FactProductInventory",
+    "csv_file": "FactProductInventory.csv",
+    "columns": [
+      {
+        "name": "ProductKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "DateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "MovementDate",
+        "type": "DATE",
+        "mode": "NULLABLE",
+        "raw_sql_type": "date"
+      },
+      {
+        "name": "UnitCost",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "UnitsIn",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "UnitsOut",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "UnitsBalance",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      }
+    ]
+  },
+  "FactResellerSales": {
+    "table_name": "FactResellerSales",
+    "csv_file": "FactResellerSales.csv",
+    "columns": [
+      {
+        "name": "ProductKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "OrderDateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "DueDateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ShipDateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ResellerKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "EmployeeKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "PromotionKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "CurrencyKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "SalesTerritoryKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "SalesOrderNumber",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "SalesOrderLineNumber",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "RevisionNumber",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "OrderQuantity",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "smallint"
+      },
+      {
+        "name": "UnitPrice",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "ExtendedAmount",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "UnitPriceDiscountPct",
+        "type": "FLOAT",
+        "mode": "NULLABLE",
+        "raw_sql_type": "float"
+      },
+      {
+        "name": "DiscountAmount",
+        "type": "FLOAT",
+        "mode": "NULLABLE",
+        "raw_sql_type": "float"
+      },
+      {
+        "name": "ProductStandardCost",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "TotalProductCost",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "SalesAmount",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "TaxAmt",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "Freight",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "CarrierTrackingNumber",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "CustomerPONumber",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "OrderDate",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      },
+      {
+        "name": "DueDate",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      },
+      {
+        "name": "ShipDate",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      }
+    ]
+  },
+  "FactSalesQuota": {
+    "table_name": "FactSalesQuota",
+    "csv_file": "FactSalesQuota.csv",
+    "columns": [
+      {
+        "name": "SalesQuotaKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "EmployeeKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "DateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "CalendarYear",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "smallint"
+      },
+      {
+        "name": "CalendarQuarter",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "SalesAmountQuota",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "Date",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      }
+    ]
+  },
+  "FactSurveyResponse": {
+    "table_name": "FactSurveyResponse",
+    "csv_file": "FactSurveyResponse.csv",
+    "columns": [
+      {
+        "name": "SurveyResponseKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "DateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "CustomerKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ProductCategoryKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "EnglishProductCategoryName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "ProductSubcategoryKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "EnglishProductSubcategoryName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "Date",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      }
+    ]
+  },
+  "NewFactCurrencyRate": {
+    "table_name": "NewFactCurrencyRate",
+    "csv_file": "NewFactCurrencyRate.csv",
+    "columns": [
+      {
+        "name": "AverageRate",
+        "type": "FLOAT",
+        "mode": "NULLABLE",
+        "raw_sql_type": "real"
+      },
+      {
+        "name": "CurrencyID",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "CurrencyDate",
+        "type": "DATE",
+        "mode": "NULLABLE",
+        "raw_sql_type": "date"
+      },
+      {
+        "name": "EndOfDayRate",
+        "type": "FLOAT",
+        "mode": "NULLABLE",
+        "raw_sql_type": "real"
+      },
+      {
+        "name": "CurrencyKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "DateKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      }
+    ]
+  },
+  "ProspectiveBuyer": {
+    "table_name": "ProspectiveBuyer",
+    "csv_file": "ProspectiveBuyer.csv",
+    "columns": [
+      {
+        "name": "ProspectiveBuyerKey",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "ProspectAlternateKey",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "FirstName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "MiddleName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "LastName",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "BirthDate",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "raw_sql_type": "datetime"
+      },
+      {
+        "name": "MaritalStatus",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nchar"
+      },
+      {
+        "name": "Gender",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "EmailAddress",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "YearlyIncome",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "raw_sql_type": "money"
+      },
+      {
+        "name": "TotalChildren",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "NumberChildrenAtHome",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "Education",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "Occupation",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "HouseOwnerFlag",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nchar"
+      },
+      {
+        "name": "NumberCarsOwned",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "tinyint"
+      },
+      {
+        "name": "AddressLine1",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "AddressLine2",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "City",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "StateProvinceCode",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "PostalCode",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "Phone",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "Salutation",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "nvarchar"
+      },
+      {
+        "name": "Unknown",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      }
+    ]
+  },
+  "sysdiagrams": {
+    "table_name": "sysdiagrams",
+    "csv_file": "sysdiagrams.csv",
+    "columns": [
+      {
+        "name": "name",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "sysname"
+      },
+      {
+        "name": "principal_id",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "diagram_id",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "version",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "raw_sql_type": "int"
+      },
+      {
+        "name": "definition",
+        "type": "BYTES",
+        "mode": "NULLABLE",
+        "raw_sql_type": "varbinary"
+      },
+      {
+        "name": "SET",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "ansi_padding"
+      },
+      {
+        "name": "EXEC",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "sys"
+      },
+      {
+        "name": "INSERT",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "raw_sql_type": "into"
+      }
+    ]
+  }
+}

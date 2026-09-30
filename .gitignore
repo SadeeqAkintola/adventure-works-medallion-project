@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# dbt
+dbt_adventureworks/target/
+dbt_adventureworks/dbt_packages/
+dbt_adventureworks/logs/
+
+# Big data source CSVs (can be downloaded from release link or staged in GCS)
+# Keep scripts and metadata
+*.csv
+
+# OS & IDE
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# GCP Credentials
+*credentials*.json
+*service_account*.json
