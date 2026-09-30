@@ -23,7 +23,7 @@ cleaned as (
         nullif(trim(c.MiddleName), '') as middle_name,
         trim(c.LastName) as last_name,
         concat(trim(c.FirstName), ' ', coalesce(concat(trim(c.MiddleName), ' '), ''), trim(c.LastName)) as full_name,
-        case when c.NameStyle = true or c.NameStyle = '1' then true else false end as is_eastern_name_order,
+        case when cast(c.NameStyle as STRING) in ('1', 'true', 'TRUE') then true else false end as is_eastern_name_order,
         cast(c.BirthDate as DATE) as birth_date,
         case 
             when c.MaritalStatus = 'M' then 'Married'
@@ -48,7 +48,7 @@ cleaned as (
         cast(c.NumberChildrenAtHome as INT64) as children_at_home,
         coalesce(c.EnglishEducation, 'Unknown') as education_level,
         coalesce(c.EnglishOccupation, 'Unknown') as occupation,
-        case when c.HouseOwnerFlag = '1' or c.HouseOwnerFlag = true then true else false end as is_homeowner,
+        case when cast(c.HouseOwnerFlag as STRING) in ('1', 'true', 'TRUE') then true else false end as is_homeowner,
         cast(c.NumberCarsOwned as INT64) as cars_owned,
         trim(c.AddressLine1) as address_line1,
         nullif(trim(c.AddressLine2), '') as address_line2,
@@ -59,12 +59,10 @@ cleaned as (
         -- Joined Geography attributes
         g.City as city,
         g.StateProvinceName as state_province,
-        g.CountryRegionCode as country_code,
         g.EnglishCountryRegionName as country_name,
         g.PostalCode as postal_code,
-        cast(g.SalesTerritoryKey as INT64) as sales_territory_key,
 
-        -- Ingestion audit
+        -- Audit Metadata
         c._ingested_at as bronze_ingested_at,
         current_timestamp() as silver_updated_at
     from raw_customers c

@@ -34,12 +34,12 @@ cleaned as (
             when Gender = 'F' then 'Female'
             else 'Unknown'
         end as gender,
-        case when SalariedFlag = true or SalariedFlag = '1' then true else false end as is_salaried,
+        case when cast(SalariedFlag as STRING) in ('1', 'true', 'TRUE') then true else false end as is_salaried,
         cast(BaseRate as NUMERIC) as base_rate,
         cast(VacationHours as INT64) as vacation_hours,
         cast(SickLeaveHours as INT64) as sick_leave_hours,
-        case when CurrentFlag = true or CurrentFlag = '1' then true else false end as is_current_employee,
-        case when SalesPersonFlag = true or SalesPersonFlag = '1' then true else false end as sales_person_flag,
+        case when cast(CurrentFlag as STRING) in ('1', 'true', 'TRUE') then true else false end as is_current_employee,
+        case when cast(SalesPersonFlag as STRING) in ('1', 'true', 'TRUE') then true else false end as sales_person_flag,
         coalesce(trim(DepartmentName), 'General') as department_name,
         cast(StartDate as DATE) as department_start_date,
         cast(EndDate as DATE) as department_end_date,
