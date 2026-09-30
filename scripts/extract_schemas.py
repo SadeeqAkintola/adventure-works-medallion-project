@@ -90,13 +90,14 @@ def parse_sql_ddl(sql_path: Path):
     return tables
 
 if __name__ == '__main__':
-    sql_file = Path('/Users/sadeeq/workspace/adventure-works-medallion-project/AdventureWorksDW-data-warehouse-install-script/instawdbdw.sql')
+    project_root = Path(__file__).parent.parent
+    sql_file = project_root / 'AdventureWorksDW-data-warehouse-install-script' / 'instawdbdw.sql'
     tables = parse_sql_ddl(sql_file)
     print(f"Extracted {len(tables)} tables from SQL DDL:")
     for name, data in tables.items():
         print(f"  - {name}: {len(data['columns'])} columns (CSV: {data['csv_file']})")
     
-    out_file = Path('/Users/sadeeq/workspace/adventure-works-medallion-project/scripts/schemas.json')
+    out_file = project_root / 'scripts' / 'schemas.json'
     out_file.parent.mkdir(parents=True, exist_ok=True)
     out_file.write_text(json.dumps(tables, indent=2))
     print(f"\nSaved schemas to {out_file}")

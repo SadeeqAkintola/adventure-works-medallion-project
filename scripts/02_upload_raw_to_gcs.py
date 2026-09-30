@@ -70,7 +70,8 @@ def upload_all_files(project_id: str, data_dir: str, remote_prefix: str = "raw/a
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Upload raw CSV files to GCS.")
     parser.add_argument("--project-id", default="idyllic-theater-agentic-ai", help="GCP Project ID")
-    parser.add_argument("--data-dir", default="/Users/sadeeq/workspace/adventure-works-medallion-project/AdventureWorksDW-data-warehouse-install-script", help="Path to raw DW directory")
+    default_data_dir = str(Path(__file__).parent.parent / "AdventureWorksDW-data-warehouse-install-script")
+    parser.add_argument("--data-dir", default=default_data_dir, help="Path to raw DW directory")
     parser.add_argument("--remote-prefix", default="raw/adventureworks", help="GCS folder prefix")
     parser.add_argument("--workers", type=int, default=8, help="Parallel upload threads")
     
